@@ -1,0 +1,8 @@
+.styleMarkdownMenu {
+    margin: 5px 0;
+    flex: 1;
+    display: flex;
+    position: absolute;
+    right: 20px;
+    top: 10px;
+}

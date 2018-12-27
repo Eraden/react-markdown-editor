@@ -1,0 +1,28 @@
+.styleMarkdownEditorHeader {
+    display: flex;
+    flex-direction: column;
+    border-bottom: 1px solid #ddd;
+    margin-left: 0;
+    margin-right: 0;
+    min-height: 50px;
+    justify-content: center;
+    position: relative;
+}
+
+.styleMarkdownEditorContainer {
+    display: flex;
+    flex-direction: column;
+    margin-top: 2px;
+    padding-top: 10px;
+    border: 1px solid #ddd;
+    background-color: #f7f7f7;
+}
+
+.styleMarkdownMenu {
+    margin: 5px 0;
+    flex: 1;
+    display: flex;
+    position: absolute;
+    right: 20px;
+    top: 10px;
+}

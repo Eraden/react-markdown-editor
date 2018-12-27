@@ -1,0 +1,28 @@
+.styleMarkdownEditorTabs {
+    border: none;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.styleTab {
+    padding: 0 20px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+}
+
+.styleActiveTab {
+    padding: 0 20px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    border-left: 1px solid #ddd;
+    border-right: 1px solid #ddd;
+    border-top: 1px solid #ddd;
+    background-color: #fff;
+    border-radius: 3px;
+}

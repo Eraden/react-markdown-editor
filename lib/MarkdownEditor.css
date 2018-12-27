@@ -1,0 +1,114 @@
+.src-components-Button-styles-modules_1QJ7LbFTekaspADFc7aBbh_buttonWithoutIcon {
+    display: flex;
+    min-width: 50px;
+    border: 1px solid #ddd;
+    color: black;
+    background-color: white;
+    border-radius: 4px;
+    margin: 0 2px;
+    padding: 2px 3px;
+    cursor: pointer;
+    text-align: center;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.src-components-IconButton-styles-modules_2LWbyCbWpWAWlTAWgqyaPV_markdownButton {
+    flex: 1;
+    width: 24px;
+    height: 24px;
+    border: 1px solid #ddd;
+    background-color: white;
+    border-radius: 4px;
+    margin: 0 2px;
+    padding: 2px 3px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.src-components-MarkdownEditorMenu-styles-modules_1qj-5vekobk81wqlj4lnHF_styleMarkdownMenu {
+    margin: 5px 0;
+    flex: 1;
+    display: flex;
+    position: absolute;
+    right: 20px;
+    top: 10px;
+}
+
+.src-components-MarkdownEditorTabs-styles-modules_2PjwlbDK2HxNVm7QsRDtNR_styleMarkdownEditorTabs {
+    border: none;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.src-components-MarkdownEditorTabs-styles-modules_19izX9VKlk4OExMds_Kfqt_styleTab {
+    padding: 0 20px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+}
+
+.src-components-MarkdownEditorTabs-styles-modules_1u4gWq0NjZy5bcpv5KnoI2_styleActiveTab {
+    padding: 0 20px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    border-left: 1px solid #ddd;
+    border-right: 1px solid #ddd;
+    border-top: 1px solid #ddd;
+    background-color: #fff;
+    border-radius: 3px;
+}
+
+.src-components-MarkdownEditorContent-styles-modules_CX9ocD2IKJmai1c2pNJ5e_styleMarkdownTextArea {
+    height: 90%;
+    width: 100%;
+    padding: 30px 10px;
+    border: none;
+}
+
+.src-components-MarkdownEditorPreview-styles-modules_3EZWZjNVgGpOgvClu4fid_styleMarkdownPreviewArea {
+    height: 90%;
+    width: 100%;
+    padding: 30px 10px;
+    background-color: #fff;
+    border: none;
+}
+
+.src-components-MarkdownEditor-styles-modules_dsLHi8vubpxyNjjy3AHa-_styleMarkdownEditorHeader {
+    display: flex;
+    flex-direction: column;
+    border-bottom: 1px solid #ddd;
+    margin-left: 0;
+    margin-right: 0;
+    min-height: 50px;
+    justify-content: center;
+    position: relative;
+}
+
+.src-components-MarkdownEditor-styles-modules_2TSq3Q8Y3Ou1AiDnii-7bC_styleMarkdownEditorContainer {
+    display: flex;
+    flex-direction: column;
+    margin-top: 2px;
+    padding-top: 10px;
+    border: 1px solid #ddd;
+    background-color: #f7f7f7;
+}
+
+.src-components-MarkdownEditor-styles-modules_1oN-cAWR2eceSmL_lwtp1H_styleMarkdownMenu {
+    margin: 5px 0;
+    flex: 1;
+    display: flex;
+    position: absolute;
+    right: 20px;
+    top: 10px;
+}
+
+
+/*# sourceMappingURL=MarkdownEditor.css.map*/
