@@ -18,3 +18,6 @@ const content = (state = { markdown: "" }, { type, payload }) => {
 };
 
 export default content;
+
+export const getMarkdown = ({state, storeField}) =>
+    state[storeField].content.markdown;

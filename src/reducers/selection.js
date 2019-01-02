@@ -33,3 +33,6 @@ const selection = (state = { currentSelection: null }, { type, payload }) => {
 };
 
 export default selection;
+
+export const getCurrentSelection = ({ state, storeField }) =>
+    state[storeField].selection.currentSelection;

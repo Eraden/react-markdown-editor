@@ -16,16 +16,4 @@ MarkdownEditorPreview.propTypes = {
     content: PropTypes.string.isRequired
 };
 
-MarkdownEditorPreview.defaultProps = {
-    styles: {
-        styleMarkdownPreviewArea: {
-            height:          '90%',
-            width:           '100%',
-            padding:         '30px 10px',
-            backgroundColor: '#fff',
-            border:          'none'
-        }
-    }
-};
-
 export default MarkdownEditorPreview;

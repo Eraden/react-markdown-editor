@@ -10,6 +10,7 @@ import MarkdownEditorContent from "../MarkdownEditorContent";
 import MarkdownEditorPreview from "../MarkdownEditorPreview";
 
 import * as types            from "../../reducers/types";
+import * as getters          from "../../reducers/getters";
 import generateMarkdownToken from "../../utils/tokens";
 import * as actions          from "../../actions";
 import * as styles           from "./styles.modules.css";
@@ -17,6 +18,7 @@ import * as styles           from "./styles.modules.css";
 class MarkdownEditor extends React.Component {
     static get propTypes() {
         return {
+            storeField:      PropTypes.string.isRequired,
             initialContent:  PropTypes.string.isRequired,
             className:       PropTypes.string,
             iconsSet:        PropTypes.oneOf(['font-awesome', 'materialize-ui']).isRequired,
@@ -52,7 +54,7 @@ class MarkdownEditor extends React.Component {
 
     render() {
         const { inEditMode, content, instanceRef } = this.state;
-        const { editorTabs, iconsSet, className, currentSelection } = this.props;
+        const { editorTabs, iconsSet, className, currentSelection, storeField } = this.props;
 
         return (
             <div className={classNames(className, "mde-wrapper")}>
@@ -72,7 +74,7 @@ class MarkdownEditor extends React.Component {
                                 )
                                 : null
                         }
-                        <MarkdownEditorTabs/>
+                        <MarkdownEditorTabs storeField={storeField}/>
                     </div>
                     {
                         inEditMode
@@ -80,6 +82,7 @@ class MarkdownEditor extends React.Component {
                                 <MarkdownEditorContent
                                     content={content}
                                     onChangeHandler={this.onChangeHandler}
+                                    storeField={storeField}
                                 />
                             )
                             : (
@@ -117,10 +120,10 @@ class MarkdownEditor extends React.Component {
     }
 }
 
-const mapStateToProps = ({ tabs, selection, content }) => ({
-    activeTab:        tabs.activeTab,
-    currentSelection: selection.currentSelection,
-    markdown:         content.markdown,
+const mapStateToProps = (state, { storeField }) => ({
+    activeTab:        getters.getActiveTab({ state, storeField }),
+    currentSelection: getters.getCurrentSelection({ state, storeField }),
+    markdown:         getters.getMarkdown({ state, storeField }),
 });
 const mapDispatchToProps = dispatch => ({
     updateText: (text) => dispatch(actions.updateText(text)),

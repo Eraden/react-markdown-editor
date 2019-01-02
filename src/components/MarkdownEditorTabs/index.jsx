@@ -1,9 +1,11 @@
 import React       from "react";
 import { connect } from "react-redux";
 import classNames  from "classnames";
+import PropTypes   from "prop-types";
 
 import * as styles  from "./styles.modules.css";
 import * as types   from "../../reducers/types";
+import * as tabs    from "../../reducers/tabs";
 import * as actions from "../../actions";
 
 const MarkdownEditorTabs = ({ activeTab, editorTabClicked, previewTabClicked }) => (
@@ -31,9 +33,13 @@ const MarkdownEditorTabs = ({ activeTab, editorTabClicked, previewTabClicked }) 
         </div>
     </div>
 );
+MarkdownEditorTabs.propTypes = {
+    storeField: PropTypes.string.isRequired,
+    activeTab:  PropTypes.number,
+};
 
-const mapStateToProps = ({ tabs }) => ({
-    activeTab: tabs.activeTab,
+const mapStateToProps = (state, { storeField }) => ({
+    activeTab: tabs.getActiveTab({ storeField, state }),
 });
 const mapDispatchToProps = (dispatch) => ({
     editorTabClicked:  () => dispatch(actions.editorTabClicked()),

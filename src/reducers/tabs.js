@@ -12,3 +12,6 @@ const tabs = (state = { activeTab: types.EDITOR }, { type }) => {
 };
 
 export default tabs;
+
+export const getActiveTab = ({ state, storeField }) =>
+    state[storeField].tabs.activeTab;

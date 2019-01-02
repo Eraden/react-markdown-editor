@@ -12,7 +12,7 @@ import * as styles  from "./styles.modules.css";
 class MarkdownEditorMenu extends React.Component {
     static get propTypes() {
         return {
-            iconsSet: PropTypes.string.isRequired
+            iconsSet: PropTypes.string.isRequired,
         };
     }
 
@@ -20,10 +20,6 @@ class MarkdownEditorMenu extends React.Component {
         enabled:        false,
         isMaterialized: false,
     };
-
-    componentWillMount() {
-        this.setState({ isMaterialized: this.props.iconsSet !== 'font-awesome' })
-    }
 
     static getDerivedStateFromProps(props, state) {
         const { currentSelection } = props;

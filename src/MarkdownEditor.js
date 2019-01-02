@@ -1,15 +1,21 @@
-import React        from "react";
-import { Provider } from "react-redux";
-
-import store from "./store";
+import React          from "react";
+import { Provider }   from "react-redux";
+import * as PropTypes from "prop-types";
 
 import MarkdownEditor from "./components/MarkdownEditor";
 
-const MarkdownEditorProvider = (props) => (
+export reducers from "./reducers";
+
+const MarkdownEditorProvider = ({ store, name, ...rest }) => (
     <Provider store={store}>
-        <MarkdownEditor {...props} />
+        <MarkdownEditor {...rest} storeField={name} />
     </Provider>
 );
+
+MarkdownEditorProvider.propTypes = {
+    store: PropTypes.object.isRequired,
+    name:  PropTypes.string.isRequired,
+};
 
 
 export default MarkdownEditorProvider;

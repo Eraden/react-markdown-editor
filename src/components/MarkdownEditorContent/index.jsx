@@ -5,6 +5,7 @@ import classNames  from "classnames";
 
 import { toMarkdown } from "../../utils/MarkdownUtils";
 
+import * as getters from "../../reducers/getters";
 import * as actions from "../../actions";
 import * as styles  from "./styles.modules.css";
 
@@ -26,7 +27,8 @@ class MarkdownEditorContent extends React.Component {
     static get propTypes() {
         return {
             content:         PropTypes.string.isRequired,
-            onChangeHandler: PropTypes.func.isRequired
+            onChangeHandler: PropTypes.func.isRequired,
+            storeField:      PropTypes.string.isRequired,
         }
     }
 
@@ -117,14 +119,14 @@ class MarkdownEditorContent extends React.Component {
     }
 }
 
-const mapStateToProps = ({ selection, content }) => ({
-    currentSelection: selection.currentSelection,
-    content:          content.markdown,
+const mapStateToProps = (state, { storeField }) => ({
+    currentSelection: getters.getCurrentSelection({ state, storeField }),
+    content:          getters.getMarkdown({ state, storeField }),
 });
 
 const mapDispatchToProps = (dispatch) => ({
-    updateText:     (text) => dispatch(actions.updateText(text)),
-    setSelection:   selection => dispatch(actions.setSelection(selection)),
+    updateText:   text => dispatch(actions.updateText(text)),
+    setSelection: selection => dispatch(actions.setSelection(selection)),
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(MarkdownEditorContent);
